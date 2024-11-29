@@ -1,5 +1,6 @@
 public class Player {
     String name;
+    int point;
 
     Player(String n) {
         name = n;
@@ -7,5 +8,6 @@ public class Player {
 
     void turn(Dice d) {
         d.roll();
+        point = d.me;
     }
 }

@@ -11,19 +11,22 @@ public class Game {
 
     void start() {
         p1.turn(d);
-        int d1 = d.me;
-        System.out.println(p1.name + "の目 " + d1);
+        System.out.println(p1.name + "の目 " + p1.point);
         p2.turn(d);
-        int d2 = d.me;
-        System.out.println(p2.name + "の目 " + d2);
+        System.out.println(p2.name + "の目 " + p2.point);
 
-        System.out.println("----------------");
-        if (d1 < d2) {
+        judge();
+    }
+
+    void judge() {
+        System.out.println("-------------------");
+        if (p1.point < p2.point) {
             System.out.println(p2.name + "の勝ち");
-        } else if (d1 > d2) {
+        } else if (p1.point > p2.point) {
             System.out.println(p1.name + "の勝ち");
         } else {
             System.out.println("あいこ");
         }
+        System.out.println("-------------------");
     }
 }
